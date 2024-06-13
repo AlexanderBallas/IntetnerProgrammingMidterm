@@ -12,25 +12,54 @@
                 </ul>
             </nav>
         </header>
+        <style>
+            table {
+                width: 50%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+            th {
+                cursor: pointer;
+                background-color: #f2f2f2;
+            }
+            nav li {
+                display: inline;
+            }
+            nav a {
+                display: inline-block;
+                padding: 1em;
+                text-decoration: none;
+            }
+        </style>
       </head>
       <body>
-            <h1 class="title">Hello World! . index</h1>
+            <h1 class="title">Index Page</h1>
             <p id="currentTime"></p>
             <script src="index.js" defer></script>
-            <form>
-            <div>
-                <h2>My favorite movies</h2>
-                <p>title:
-                    <input type="text" name="title"
-                    size="15" maxlength="30" />
-                </p>
-                <p>rating:
-                    <input type="text" name="rating"
-                    size="15" maxlength="30" />
-                </p>
-                <input type="reset">
-                <input type="submit" value="submit">
-            </div>
+            <form id="itemForm">
+                <label for="itemName">Movie:</label>
+                <input type="text" id="itemName" name="itemName" required>
+                <label for="itemDescription">Rating:</label>
+                <input type="text" id="itemDescription" name="itemDescription" required>
+                <button type="submit">Add Item</button>
             </form>
+        
+            <table id="itemTable">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">Movie</th>
+                        <th onclick="sortTable(1)">Rating</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be added here -->
+                </tbody>
+            </table>
       </body>
 </html>
