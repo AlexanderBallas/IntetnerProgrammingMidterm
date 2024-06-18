@@ -1,22 +1,161 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>index page</title>
-        <link rel="stylesheet" href="styles.css" />
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-      </head>
-      <body>
-          <h1 class="title">Hello World! . about</h1>
-          <p id="currentTime"></p>
-          <script src="about.js" defer></script>
 
-      </body>
+<head>
+    <title>About page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <header>
+        <nav class="topnav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            cursor: pointer;
+            background-color: #f2f2f2;
+        }
+
+        .topnav {
+            background-color: rgb(19, 118, 180);
+
+        }
+
+        nav li {
+            display: inline;
+
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 1em;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: rgb(19, 118, 180);
+            color: white;
+            padding-bottom: 0;
+        }
+
+        .footer-div {
+            display: flex;
+            align-items: center;
+            display: inline;
+
+        }
+
+        .footer-div ul {
+            flex-grow: 1;
+            display: inline;
+
+        }
+
+        .navfooter {
+            display: inline;
+        }
+
+        .carousel {
+            position: relative;
+            width: 300px;
+            overflow: hidden;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+        .carousel-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .carousel-control.prev {
+            left: 10px;
+        }
+
+        .carousel-control.next {
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title">About page. Carousel</h1>
+    <p id="currentTime"></p>
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item">
+                <h2>Argyris Ballas</h2>
+            </div>
+            <div class="carousel-item">
+                <img src=".\photos\IMG_0829.PNG" width="200px" alt=" Photo">
+            </div>
+            <div class="carousel-item">
+                <p>Hey I'm an IT student with a focus in UX.</p>
+            </div>
+        </div>
+        <button class="carousel-control prev">&laquo; Prev</button>
+        <button class="carousel-control next">Next &raquo;</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="about.js" defer></script>
+    <footer class="footer">
+        <div class="footer-div">
+            <h3>Movies</h3>
+            <ul class="navfooter">
+                <li><a href="https://www.youtube.com/feed/storefront?bp=ogUCKAU%3D" target="_blank"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" width="30"></a>
+                </li>
+                <li><a href="https://www.imdb.com/" target="_blank"><img
+                            src="https://m.media-amazon.com/images/G/01/IMDb/brand/guidelines/imdb/IMDb_Logo_Alt_Rectangle_Black._CB443386324_.png"
+                            width="30"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
 </html>

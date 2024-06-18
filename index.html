@@ -1,65 +1,114 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>index page</title>
-        <link rel="stylesheet" href="styles.css" />
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Index</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <style>
-            table {
-                width: 50%;
-                border-collapse: collapse;
-                margin-top: 20px;
-            }
-            th, td {
-                border: 1px solid #ddd;
-                padding: 8px;
-                text-align: left;
-            }
-            th {
-                cursor: pointer;
-                background-color: #f2f2f2;
-            }
-            nav li {
-                display: inline;
-            }
-            nav a {
-                display: inline-block;
-                padding: 1em;
-                text-decoration: none;
-            }
-        </style>
-      </head>
-      <body>
-            <h1 class="title">Index Page</h1>
-            <p id="currentTime"></p>
-            <script src="index.js" defer></script>
-            <form id="itemForm">
-                <label for="itemName">Movie:</label>
-                <input type="text" id="itemName" name="itemName" required>
-                <label for="itemDescription">Rating:</label>
-                <input type="text" id="itemDescription" name="itemDescription" required>
-                <button type="submit">Add Item</button>
-            </form>
-        
-            <table id="itemTable">
-                <thead>
-                    <tr>
-                        <th onclick="sortTable(0)">Movie</th>
-                        <th onclick="sortTable(1)">Rating</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Rows will be added here -->
-                </tbody>
-            </table>
-      </body>
+
+<head>
+    <title>index page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <header>
+        <nav class="topnav">
+            <ul>
+                <li><a href="index.html">Index</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            cursor: pointer;
+            background-color: #f2f2f2;
+        }
+        .topnav{
+            background-color: rgb(19, 118, 180);
+            position: sticky;
+
+        }
+        nav li {
+            display: inline;
+            
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 1em;
+            text-decoration: none;
+        }
+
+        .footer {
+            background-color: rgb(19, 118, 180);
+            color: white;
+            padding-bottom: 0;  
+            position: relative;
+            vertical-align: bottom;
+        }
+
+        .footer-div {
+            display: flex;
+            align-items: center;
+            display: inline;    
+        }
+
+        .footer-div ul {
+            flex-grow: 1;
+            display: inline;    
+            
+        }
+        .navfooter{
+            display: inline;           
+            object-position: end; 
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title">Index Page. Form</h1>
+    <p id="currentTime"></p>
+    <script src="index.js" defer></script>
+    <form id="itemForm">
+        <label for="itemName">Movie:</label>
+        <input type="text" id="itemName" name="itemName" required>
+        <label for="itemDescription">Rating:</label>
+        <input type="text" id="itemDescription" name="itemDescription" required>
+        <button type="submit">Add Item</button>
+    </form>
+
+    <table id="itemTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable(0)">Movie</th>
+                <th onclick="sortTable(1)">Rating</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be added here -->
+        </tbody>
+    </table>
+    <footer class="footer">
+        <div class="footer-div">
+            <h3>Movies</h3>
+            <ul class="navfooter">
+                <li><a href="https://www.youtube.com/feed/storefront?bp=ogUCKAU%3D" target="_blank"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" width="30"></a></li>
+                <li><a href="https://www.imdb.com/" target="_blank"><img
+                            src="https://m.media-amazon.com/images/G/01/IMDb/brand/guidelines/imdb/IMDb_Logo_Alt_Rectangle_Black._CB443386324_.png" width="30"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
 </html>
